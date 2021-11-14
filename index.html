@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        body {
+            margin: auto;
+            width: 85%;
+        }
+
+        .row {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column {
+            display: inline-block;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 0.01px solid black;
+            text-align: center;
+        }
+    </style>
+    <title>Colorizing the Prokudin-Gorskii Photo Collection</title>
+</head>
+
+
+<body>
+    <h1>Colorizing the Prokudin-Gorskii Photo Collection</h1>
+    <h4>Roth Yin | rothyin@berkeley.edu</h4>
+
+    <h2>Overview</h2>
+
+    <p>The Prokudin-Gorskii Collection features color photographic surveys of the Russian Empire made between ca. 1905
+        and 1915.
+        Prokudin-Gorskii's triple-frame black-and-white glass negatives consist of three exposures made through blue,
+        green,
+        and red filters to produce photographs that could be printed or projected in color.
+        Learn more at <a href="https://www.loc.gov/collections/prokudin-gorskii/">
+            https://www.loc.gov/collections/prokudin-gorskii/</a></p>
+    <p>The goal is to take the digitized negatives and, using image processing techniques,
+        automatically produce color images with as few visual artifacts as possible.</p>
+
+    <h2>Result</h2>
+
+    <h3>Visual</h3>
+    <img src="output/cathedral.jpg" alt="cathedral" style="width:33%">
+    <img src="output/church.jpg" alt="church" style="width:33%">
+    <img src="output/emir.jpg" alt="emir" style="width:33%">
+    <img src="output/harvesters.jpg" alt="harvesters" style="width:33%">
+    <img src="output/icon.jpg" alt="icon" style="width:33%">
+    <img src="output/lady.jpg" alt="lady" style="width:33%">
+    <img src="output/melons.jpg" alt="melons" style="width:33%">
+    <img src="output/monastery.jpg" alt="monastery" style="width:33%">
+    <img src="output/onion_church.jpg" alt="onion_church" style="width:33%">
+    <img src="output/self_portrait.jpg" alt="self_portrait" style="width:33%">
+    <img src="output/three_generations.jpg" alt="three_generations" style="width:33%">
+    <img src="output/tobolsk.jpg" alt="tobolsk" style="width:33%">
+    <img src="output/train.jpg" alt="train" style="width:33%">
+    <img src="output/workshop.jpg" alt="workshop" style="width:33%">
+
+    <h3>Numerical</h3>
+    <table>
+        <tr>
+            <th>filename</th>
+            <th>v_offset_b2g</th>
+            <th>h_offset_b2g</th>
+            <th>v_offset_r2g</th>
+            <th>h_offset_r2g</th>
+        </tr>
+        <tr>
+            <td>cathedral</td>
+            <td>-5</td>
+            <td>-2</td>
+            <td>7</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>church</td>
+            <td>-25</td>
+            <td>-4</td>
+            <td>33</td>
+            <td>-8</td>
+        </tr>
+        <tr>
+            <td>emir</td>
+            <td>-49</td>
+            <td>-24</td>
+            <td>57</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>harvesters</td>
+            <td>-59</td>
+            <td>-17</td>
+            <td>65</td>
+            <td>-3</td>
+        </tr>
+        <tr>
+            <td>icon</td>
+            <td>-41</td>
+            <td>-17</td>
+            <td>48</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>lady</td>
+            <td>-55</td>
+            <td>-8</td>
+            <td>62</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>melons</td>
+            <td>-81</td>
+            <td>-10</td>
+            <td>96</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>monastery</td>
+            <td>3</td>
+            <td>-2</td>
+            <td>6</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>onion_church</td>
+            <td>-51</td>
+            <td>-27</td>
+            <td>57</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>self_portrait</td>
+            <td>-79</td>
+            <td>-29</td>
+            <td>98</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>three_generations</td>
+            <td>-53</td>
+            <td>-14</td>
+            <td>58</td>
+            <td>-3</td>
+        </tr>
+        <tr>
+            <td>tobolsk</td>
+            <td>-3</td>
+            <td>-3</td>
+            <td>4</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>train</td>
+            <td>-42</td>
+            <td>-6</td>
+            <td>43</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>workshop</td>
+            <td>-53</td>
+            <td>0</td>
+            <td>52</td>
+            <td>-11</td>
+        </tr>
+    </table>
+
+    <h3>More results</h3>
+
+    <img src="output/merv.jpg" alt="merv" style="width:33%">
+    <img src="output/poliana.jpg" alt="poliana" style="width:33%">
+    <img src="output/urals.jpg" alt="emir" style="width:33%">
+
+    <table>
+        <tr>
+            <th>filename</th>
+            <th>v_offset_b2g</th>
+            <th>h_offset_b2g</th>
+            <th>v_offset_r2g</th>
+            <th>h_offset_r2g</th>
+        </tr>
+        <tr>
+            <td>merv</td>
+            <td>-32</td>
+            <td>-5</td>
+            <td>47</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>poliana</td>
+            <td>-42</td>
+            <td>2</td>
+            <td>55</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>urals</td>
+            <td>-40</td>
+            <td>-33</td>
+            <td>55</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+    <h2>Approach</h2>
+
+    <p>Because the three frames are given in the same image vertically,
+        divide the image up evenly to get the individual frames.</p>
+
+    <div class="row">
+        <div class="column">
+            <img src="https://tile.loc.gov/storage-services/service/pnp/prok/01800/01886v.jpg"
+                alt="The three frames are given in the same image vertically." style="width:200px;height:auto;">
+        </div>
+    </div>
+
+    <p>The basic idea is to exhaustively search over a window of possible displacements and choose the best match.
+    <ul>
+        <li>Because the frames are separated naively, the vertical displacements are considerably larger than the
+            horizontal
+            displacements. The search window is experimentally chosen to be 1/15 vertically and 1/50 horizontally.</li>
+        <li>Because of the undesired behaviors towards the peripheral region, the periphery is ignored when scoring the
+            displacements. The periphery is chosen to be 1/8 experimentally.</li>
+        <li>The basic scoring metrics are Sum of Squared Differences (SSD) and normalized cross-correlation (NCC). SSD
+            costs
+            less computationally. SSD is used because experimentally the results of both are comparable.</li>
+        <li>A base color frame is chosen to match the rest two color frames. Different bases may have similar results,
+            but
+            green is chosen because it is significantly better in the image of Emir (shown above).</li>
+    </ul>
+    </p>
+    <p>More details:
+    <ul>
+        <li>Because the amount of undesired peripheral behaviors vary in different images, the cropping mainly aims to
+            eliminate the black strips on the borders.
+            <ul>
+                <li>The border strips cannot be trivially removed because they are not 100% black.</li>
+            </ul>
+        </li>
+        <li>Cropping is used instead of padding because padding seems unlogical to me. Padding introduces artifical
+            quantities
+            used in scoring which may affect the results. I regard it as a better approach to rather use parts of the
+            given
+            than introduce more to use all of the given.
+            <ul>
+                <li>As a direct result of this, rolling is no longer neccesary.</li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <p>When processing large images, I used the technique of image pyramid. It means that I first run the above
+        algorithm on
+        smaller, lower-resolution version of the images, then gradually increase the resolutions and run the algorithm
+        around the
+        displacements found on the previous level, until reaching the original images.
+    <ul>
+        <li>The speed of the algorithm depends on the level of pyramids. Reducing the images to regular jpg size (less
+            than
+            500pi) is enough to control the runtime per image under 50 seconds. More levels result in faster speed, but
+            less
+            accuracy.</li>
+        <li>The resolution is increased by a factor of 2 each time. This also means I first decrease the image to find
+            the
+            low enough resolution to start with.
+        </li>
+        <li>The search window is always with respect to the original resolution.</li>
+    </ul>
+    </p>
+
+
+</body>
+
+</html>
